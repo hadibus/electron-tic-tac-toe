@@ -4,7 +4,10 @@
   "description": "tic tac toe game client",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tic-tac-toe --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon_compressed.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Tic Tac Toe\"",    
+    "package-linux": "electron-packager . electron-tic-tac-toe --overwrite --asar --platform=linux --arch=x64 --prune=true --out=release-builds"
   },
   "keywords": [
     "client",
